@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>GrowBird India - Services</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#B91C1C",
+            "secondary": "#27AE60",
+            "accent": "#F39C12",
+            "background-light": "#FFFFFF",
+            "background-dark": "#000000",
+            "neutral": "#F3F4F6",
+            "neutral-dark": "#2d3a48",
+            "text-light": "#111827",
+            "text-dark": "#FDFEFE",
+            "grey": "#6B7280"
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+  <!-- NAVBAR -->
+ <header
+  class="fixed top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-b border-gray-200/60 dark:border-gray-700/60 shadow transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto flex items-center h-20 px-4 lg:px-8">
+    <a href="index.html" class="flex items-center gap-2">
+    <img id="brand-logo" class="h-12 w-auto" 
+         src="images/grow bird logo option 02.png"
+         alt="GrowBird India Logo" />
+</a>
+
+    <!-- Desktop navigation -->
+    <nav class="hidden md:flex flex-1 justify-center items-center gap-0 ml-10">
+      <a href="index.html"
+        class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+        Home
+        <span class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+      <a href="about.html"
+        class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+        About Us
+        <span class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+      <a href="ourprocess.html"
+        class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+        Case Studies
+        <span class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+      <a href="ourwork.html"
+        class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+        Our Work
+      </a>
+      <a href="services.html"
+        class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+        Services
+        <span class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+      <a href="idrive.html"
+        class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary">
+        iDrive
+        <span class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-red-600 to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+      <a href="contact.html"
+        class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+        Contact
+        <span class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+    </nav>
+    <!-- Dark mode toggle -->
+    <button id="theme-toggle" aria-label="Toggle Dark Mode"
+      class="ml-4 p-2 rounded-full text-charcoal dark:text-gray-300 hover:bg-light-gray dark:hover:bg-charcoal/40 transition-colors shadow focus:outline-none">
+      <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+    </button>
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-button"
+      class="md:hidden flex items-center justify-center p-2 ml-2 rounded-full text-charcoal dark:text-gray-100 hover:bg-light-gray dark:hover:bg-charcoal/40 transition-colors"
+      aria-label="Toggle mobile menu">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <nav id="mobile-menu"
+    class="hidden md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 shadow-lg pb-3 z-50">
+    <div class="flex flex-col items-center gap-1 py-2">
+      <a href="index.html"
+        class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all">
+        Home
+      </a>
+      <a href="about.html"
+        class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all">
+        About Us
+      </a>
+      <a href="ourprocess.html"
+        class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all">
+        Case Studies
+      </a>
+      <a href="services.html"
+        class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all">
+        Services
+      </a>
+      <a href="contact.html"
+        class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all">
+        Contact
+      </a>
+      <a href="#contact"
+        class="mt-2 text-center py-3 px-6 w-11/12 bg-primary text-white text-base font-bold rounded-lg shadow hover:bg-gradient-to-r hover:from-deep-red hover:to-primary transition-all mb-2">
+        Get a Quote
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>
+
+
+  <section class="hero-bg pt-12 pb-20">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-6">
+        
+        <h1 class="text-4xl lg:text-5xl font-bold leading-tight text-neutral-900 dark:text-neutral-100">
+          EMPOWERING BUSINESSES WITH STRATEGY INNOVATION & EXECUTION
+        </h1>
+
+        <p class="max-w-md text-neutral-700 dark:text-neutral-300">
+          We transform visionary ideas into powerful outcomes, igniting growth and the future of enterprise.
+        </p>
+</div>
+<div>
+<img alt="Abstract 3D graphic representing business growth and innovation" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD91mywVZELLKipC9TSbfX_EjWa78-b-cmYGt96MryH0n0N88nPcPPP6r1augeLScF82lA6jrlovB9uvMRciyS0DdRHG-1LjOY93mnW9wrfw5Mncx_-Zz-kj64P15wXkhsjd7JoqD8mYIU2XRQLM6foSC_G_srr7qA87qsK25W9IgTs_xDGEoEZ9LoCXEJnBWdesC2Nj0FdKS4trIQi2fhOvE2QOwgdY2mCsL_3F52Idf-8dsBEnEGU_h5gdWnLbYf_GBYz_QjDhCc"/>
+</div>
+</div>
+</div>
+</section>
+<main class="py-20">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Business Strategy &amp; Consulting icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWV_ovOMDjA7D0AZhB9XfbuS8XGGNOtyvP47MbdziSQYSFIxEsCHoQ4iSPuYXVCaFvm4x6pM8o32To6LpTFf2cTjH0yKtlRLc_X5UFfqEPdeh1XJ_gxIBbZY5t5XugibPKLV3QS-_DxG0TAJxB-oPLsSiXvnWHf0iczygLF-HTFDYnLcO00eFuXkj4jA4u7eADhz-C6id7aDxjOJ8FYilK5CigVQOry4oh3TgmEb6hax6qKSVaSWc5c1s3-QbdqUoQcIJclTYXAvc"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Business Strategy &amp; Consulting</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">We provide data-backed business models, financial roadmaps, and process structuring for scalable growth</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Brand Identity Corporate Positioning icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACuchZF9rGtXqKz34pI3HCpwELng7BLzLx6CXUJ3s7wFinB_HSn_DE43gKSEmiQe0mRE3dcdp40fswOuMMpC2KucBYEgFmVgRqdfjL7gd8ztk-sFw54apRC-KckyQn6otKcjzDHtMl5m5n31x-_CWQ9hNALNjzkTelfiTovE4IM0ws5XXlDXszWxEeJvYY5MeSvwk6INzwKIixqDlPJW7G6zO8Q1vV4XMpnN648pBQUv4k-UObZZjhps9oz4ttMNzIp9FIbh3O8V4"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Brand Identity Corporate Positioning</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">We build brand systems — naming, logo, visual identity, and corporate communication for global recognition</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Marketing &amp; Digital Transformation icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLFqm4KQIntHL1faJQtTt9efUr1dZ2YfwhVV6YLE5SldA6CaKKvEhnd1GgbMyrjZi3TNWM-zrXVJCm7q8LPoCupYbB7KJswhyxCkFtkDqqeRY7Ly25TgkQF0JOXvRmKGdhzkqMZn4cR4tZddbJNqho2IIuDgVUk9Sk1SAxk-0zByRQlix6-iabCwzGgSYzF-E-qoAEl-ukbkxKTWzstsaBJGkj0so9-oMfMqJAql9Dvm9gK2mEDZh7FzekLOZtCVkUeYuCPHZ14SI"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Marketing &amp; Digital Transformation</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">We manage SEO, SEM, SMM, Paid Ads, Corporate Websites, and Video Marketing for measurable digital growth</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Marketing &amp; Digital Transformation dashboard icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqDPfx4ClqDzlELp8NWy_7AZZfTWxMvb3isfQDUUcCGkngxNpiw5f-ZCc0UBuu51AeCbVDPzvDj_VLR4JkIsETcraxfnrHsDquYEXimtvrUNOMsxDFzrBNzL2rOwXNDSc8ckpLPHiUj2RIRPbTtEcGSMpRpWCYLryzKZd4RQvvSscqXEYGI7Zv6Z9sRvUT4QFLKmCYbc2y4J6hrHpyQ2SJm9LI7MX_bKzAjmzdapVwFxcSdwPhTH-NIanYju4ik54YHz4x4qPXi5A"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Manufacturing &amp; Field Execution</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Growbird manages on-ground brand activation, dealer development, product launch campaigns, and trade events</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Business &amp; Comtatit icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7IGJHafrHptJweBm7TzxUyv23FlepkwkrTQRoFPNJl2UDDwPCDRV_Gg2JWRosmMawyfJPpwWkEb_HkbPkHc0RDdIdQeQkU4zpkdO5GPU8TfROsnD7UxyX1O9izjPlhtuzmuGbhMvt4tPJ3fK_726AbbCqjLkL6paERbVUgJhyiVXmZhpEYbhbhNtz0haeJJueU_ByMvQlqZoVM1H3hYLeSng7a2dXzqMu6tz5hBpIOrjdmeNPCnZs9TC2mYg_TgByRx91xXWQO8"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Business &amp; Computing</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Business & Computing connects business strategy with technology.
+Together, they drive smarter decisions and digital growth.</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Manufacturing &amp; Sales Enablement icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwA8mHszZQ24YxWWl37CO7gOsfQ34EEi2TS0HDpbCHxu7bX3_ouolOZFl08KUf4pQ35zJ81H6kLIyag1C9RwdydWEjXB68IrtnRWd3HWMVoTnfKT07c75aQ5VjZBaDFjRHpNwdLpTFY6vNsJufeMxgSBYYhRVwbMoN9TMPFqsr_JugxJxiVKdn-Akowo7Dkwx0yeEqqiRFwavbOSu8FCXRNRKnH-PaZ4NSYAay1urLDsMXDi1D4SgL6Jhk0jyThdqYmY5Chdp-wkU"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Manufacturing &amp; Sales Enablement</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">We create sales pipelines, integrate CRM systems, and design sales kits and presentations.
+</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Business Development Strategy icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJb0EPpWpJCnawLukZE1WkU8OW34smq2OBdK2OdMjMNmK3ZO4bsKH_36JHDgUNxMoC0JYLzUh5Ga74rhteZsVA6c7iClIvOy3393M-7Gs4l9s_zh151xeo-vuJ-44Q-2ENWksJbr0PkQX0XNpDqUDz7iJifsC6qPJmefg6FSOA2rbcs-foMKPFGkpndvXqrBtdglMqlM8B1pG4i3npFz9Uh5Zh61yQlANEiQ3jPEv-joFGrpTqOaBE-MJtlwCDcZFdtqx3IkHeYaY"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Business Development Strategy</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">It’s the plan for expanding customers, markets, and business value.
+A strong strategy accelerates sustainable growth.</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Research &amp; Expansion icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMjoIHGZB-qtMFSQlg8ILmT0rrDd9CoMXClvBO4uRnFbSvyMA2WRZ4iQ4n-SGFfTmiP-58lOdNPmi9qzMHF1PaufLVq2uNjYu9vCVVgPRP-SFp-KMLGzC0FBxG-vyYryk02QfXvUSdx-0LKSNyT-WogJv7alaLmcR8EWeocq5ZXjHEAEJWLf90fW45gQRbJyIOUAHWHCuPh5N_aK64fTjaLlVOjeQMA_OxAkUvaw4cGL_87O5u2Cdt5dLkypiaHt7EP8iCy0LIM9M"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Research &amp; Expansion</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Research & Expansion uncovers new opportunities for strategic growth.</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Astruive Social Program icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUeawNQk88UTHPKmhh4pjIaH_KaZJbNVJ64B9oESFLzQcEdqm5hxeXTLb4vBZbCkqiCVYpL7rF7msvHxfUExzJ8vni8QD6ODM1iNyjX_lzTQYNuNQoLOaxp2Uq0dwjJjXZLljgVyxI8jXBZGEbeaCuZufCXuObE4B3D2of1PmnFU-bcWdlSToH4VckZkFY63F_ilA1YY7s-u_nty2y0-8N94UP6Xxg6g58yxY6Z8dQIvqK3PsNvOqEuNrLFDourECDYqBDD8LE3zU"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Astruive Social Program</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Astruive Social Program empowers communities through impactful, sustainable development initiatives.</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Creative &amp; Media Production icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf8q7L3hHn2T8yy71Mo3bRiwFsMow8LsIQtt6AZUoBBBHun7v_aW6xU8VIaIVUGWsJj00G3JCOlOCcackLdddNf-KPU2tn4cCqN3r6B7s8JNYJFs6d_1b5dsjmW5QdTc1Lqk-c2QpUQiZzAv3nYgqT07iVggEvbGQ6RjiG2qfrRRcYMT-5H4JRfo4TXbO4T1tAVMYzcfeQxnWtOWRn_GkG_0zOeuBa0Rl10G9r1Q93mcZ4qhc7_KzNmkPq2YrDmBVOox8DZJJJlbg"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Creative &amp; Media Production</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Creative & Media Production turns concepts into high-impact visuals and engaging media.</p>
+</div>
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-lg border border-red-200 dark:border-red-900 shadow-sm flex flex-col items-center text-center">
+<img alt="Startup Acceleration icon" class="h-24 object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Kinn9p_2lz9BYd_NoTyZrikeW2LIjK5GlXHRYSxzu8ASUgZlJNHt18XyyOb7UBMtYIZyVH_oxG-85igVj9KTWQLt7ebvuB-Bym7wwdeZsmZOzQ6Af0Asx1653s_XtGbWqV_17m2G_B2ltNdJz8z64mcP6MmsqE2ee0dATf3UsoVkVdFauYAmsgoYPvNLqeA-GrMS1JhrWZVgO5J_eS5_U52u0yy6PqLhZMYP1Gh-Es8ydzd68YrdkOlGEPLb2D-nvQxhomtJnu0"/>
+<h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-100">Startup Acceleration</h3>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">It helps startups grow faster through structured guidance, resources, and expert support.</p>
+</div>
+<div class="overflow-hidden rounded-lg">
+<img alt="Illustration of startup launching from a tablet" class="w-full h-full object-cover" src="images\⚡️ BREAKTHROUGH_ Originality AI's Neural Content Authentication.jpg"/>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-gray-900 dark:bg-darkbackground/50 text-gray-300 py-16 border-t border-gray-700">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-4 gap-12 text-center md:text-left">
+        
+        <!-- LOGO & SOCIAL -->
+        <div>
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+                <img src="images/grow bird logo WHITE.png" alt="GrowBird Logo"
+                    class="h-10 w-auto object-contain" />
+                <h3 class="text-2xl font-extrabold text-white"></h3>
+            </div>
+            <p class="text-gray-400">Visionary Growth, Managed Execution.</p>
+
+            <div class="flex space-x-4 mt-6 justify-center md:justify-start">
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="LinkedIn">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="Twitter">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="md:col-span-1">
+            <h4 class="font-extrabold mb-4 text-white text-xl uppercase tracking-wider">Quick Links</h4>
+            <ul class="space-y-3">
+                <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-primary transition">About Us</a></li>
+                <li><a href="ourprocess.html" class="hover:text-primary transition">Case Studies</a></li>
+                <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="md:col-span-1">
+            <h4 class="font-extrabold mb-4 text-white text-xl uppercase tracking-wider">Services</h4>
+            <ul class="space-y-3">
+                <li><a href="#" class="hover:text-primary transition">Strategic Planning</a></li>
+                <li><a href="#" class="hover:text-primary transition">Operational Management</a></li>
+                <li><a href="#" class="hover:text-primary transition">Market Expansion</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="md:col-span-1">
+            <h4 class="font-extrabold mb-4 text-white text-xl uppercase tracking-wider">Get in Touch</h4>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-2 justify-center md:justify-start">
+                    <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                    growbird.official@gmail.com
+                </li>
+                <li class="flex items-center gap-2 justify-center md:justify-start">
+                    <span class="material-symbols-outlined text-primary text-lg">call</span>
+                    +91 95993 79067
+                </li>
+                <li class="flex items-center gap-2 justify-center md:justify-start">
+                    <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                    Mumbai, Maharashtra
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mt-12 text-center text-sm text-gray-500 border-t border-gray-700 pt-8">
+        © 2025 GrowBird India. All rights reserved.
+    </div>
+</footer>
+
+</div>
+
+<!-- Theme Toggle Script -->
+<script>
+  const lightLogo = "images/grow bird logo option 02.png";   // Light logo
+  const darkLogo = "images/grow bird logo grey.png";         // Dark logo
+
+  function updateLogo(mode) {
+    const logo = document.getElementById("brand-logo");
+    if (!logo) return;
+    logo.src = mode === "dark" ? darkLogo : lightLogo;
+  }
+
+  function setThemeMode(mode) {
+    if (mode === "dark") {
+      document.documentElement.classList.add("dark");
+      document.body.classList.remove("bg-background-light");
+      document.body.classList.add("bg-background-dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.body.classList.remove("bg-background-dark");
+      document.body.classList.add("bg-background-light");
+    }
+
+    // Update logo automatically
+    updateLogo(mode);
+
+    // Update the toggle icon
+    const icon = document.getElementById("theme-toggle-icon");
+    if (icon) {
+      icon.textContent = mode === "dark" ? "light_mode" : "dark_mode";
+    }
+  }
+
+  // INITIAL LOAD
+  (function () {
+    let userTheme = localStorage.getItem("theme-mode");
+
+    // If no saved theme, detect system theme
+    if (!userTheme) {
+      userTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+
+    setThemeMode(userTheme);
+  })();
+
+  // THEME TOGGLE CLICK
+  document.getElementById("theme-toggle").onclick = function () {
+    const isDark = document.documentElement.classList.contains("dark");
+    const nextMode = isDark ? "light" : "dark";
+
+    setThemeMode(nextMode);
+    localStorage.setItem("theme-mode", nextMode);
+  };
+</script>
+
+</body>
+</html>
