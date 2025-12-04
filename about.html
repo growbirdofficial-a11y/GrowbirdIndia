@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - GrowBird India</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // BOLD RED
+                        primary: "#ec1313",
+                        accent: "#ef4444",
+
+                        // DARK THEME
+                        darkbackground: "#0a0a0a", // Near-black for main background
+                        darksurface: "#1a1a1a", // Slightly lighter for cards/sections
+                        darktext: "#ffffff", // Primary white text
+                        darksubtext: "#b3b3b3", // Light grey for secondary text
+
+                        // LIGHT THEME
+                        lightbackground: "#fdfdfd", // Off-white for main background
+                        lightsurface: "#ffffff", // Pure white for cards/sections
+                        lighttext: "#1f2937", // Dark grey for primary text
+                        lightsubtext: "#6b7280", // Medium grey for secondary text
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"],
+                    },
+                    keyframes: {
+                        'float-up': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-2px)' },
+                        }
+                    },
+                    animation: {
+                        'float-up': 'float-up 3s ease-in-out infinite',
+                    }
+                },
+            },
+        };
+    </script>
+
+    <style>
+        /* General transition smoothing */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Material icons weight */
+        .material-symbols-outlined {
+            font-variation-settings:
+                "FILL" 0,
+                "wght" 600,
+                "GRAD" 0,
+                "opsz" 24;
+        }
+
+        /* REMOVED: Base colors from CSS. We now define them on the <body> tag using Tailwind classes. */
+        /* REMOVED: Light Theme overrides from CSS. */
+    </style>
+</head>
+
+<body class="font-display bg-lightbackground text-lighttext dark:bg-darkbackground dark:text-darktext">
+
+    <header id="main-header" class="fixed top-0 w-full z-50 backdrop-blur bg-white/80 dark:bg-black/80 shadow-lg border-b border-gray-200/50 dark:border-gray-700/50 transition-shadow">
+        <div class="max-w-7xl mx-auto flex items-center h-20 px-4 lg:px-8">
+            <a href="index.html" class="flex items-center gap-3" aria-label="GrowBird Home">
+                <img id="site-logo" src="images/grow bird logo grey.png" alt="GrowBird logo" class="h-12 w-auto" />
+            </a>
+
+            <nav class="hidden md:flex flex-1 justify-center gap-2 ml-10" aria-label="Primary">
+                <a href="index.html" class="px-4 py-2 text-sm font-semibold text-lighttext dark:text-gray-300 hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="px-4 py-2 text-sm font-semibold text-primary">About Us</a>
+                <a href="ourprocess.html" class="px-4 py-2 text-sm font-semibold text-lighttext dark:text-gray-300 hover:text-primary transition-colors">Case Studies</a>
+                <a href="ourwork.html" class="px-4 py-2 text-sm font-semibold text-lighttext dark:text-gray-300 hover:text-primary transition-colors">Our Work</a>
+                <a href="services.html" class="px-4 py-2 text-sm font-semibold text-lighttext dark:text-gray-300 hover:text-primary transition-colors">Services</a>
+                <a href="idrive.html" class="px-4 py-2 text-sm font-semibold text-lighttext dark:text-gray-300 hover:text-primary transition-colors">iDrive</a>
+                <a href="contact.html" class="px-4 py-2 text-sm font-semibold text-lighttext dark:text-gray-300 hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <div class="ml-auto flex items-center gap-2">
+                <button id="theme-toggle" aria-pressed="false" class="p-2 rounded-full text-lighttext dark:text-white hover:text-primary focus:outline-none transition-colors" title="Toggle theme">
+                    <span id="theme-icon" class="material-symbols-outlined">dark_mode</span>
+                </button>
+
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-full text-lighttext dark:text-white hover:text-primary focus:outline-none transition-colors" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <nav id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-lightsurface dark:bg-darksurface border-t border-gray-200/60 dark:border-gray-700/60 shadow-lg" aria-label="Mobile">
+            <div class="flex flex-col py-3">
+                <a class="py-3 text-center text-lighttext dark:text-white hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="py-3 text-center text-primary" href="about.html">About</a>
+                <a class="py-3 text-center text-lighttext dark:text-white hover:text-primary transition-colors" href="ourprocess.html">Case Studies</a>
+                <a class="py-3 text-center text-lighttext dark:text-white hover:text-primary transition-colors" href="services.html">Services</a>
+                <a class="py-3 text-center text-lighttext dark:text-white hover:text-primary transition-colors" href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative overflow-hidden py-32 md:py-48 bg-lightsurface dark:bg-darksurface transition-colors">
+            <div class="absolute inset-0 -z-10">
+                <div class="w-80 h-80 bg-primary/20 blur-3xl rounded-full absolute top-10 left-10 opacity-30 animate-float-up"></div>
+                <div class="w-96 h-96 bg-primary/10 dark:bg-white/10 blur-3xl rounded-full absolute bottom-10 right-10 opacity-20"></div>
+            </div>
+
+            <div class="text-center relative px-6 max-w-4xl mx-auto">
+
+                <h1 class="text-sm uppercase tracking-[0.4em] font-extrabold text-primary" data-aos="fade-up">
+                    About GrowBird India
+                </h1>
+
+                <h2 class="mt-4 text-5xl font-extrabold text-lighttext dark:text-white sm:text-7xl leading-tight transition-colors" data-aos="fade-up" data-aos-delay="100">
+                    From Idea to Industry, <br class="hidden sm:inline" />From Vision to Value.
+                </h2>
+
+                <p class="mt-6 text-xl text-lightsubtext dark:text-darksubtext max-w-3xl mx-auto transition-colors" data-aos="fade-up" data-aos-delay="200">
+                    We are a business contracting firm focused on turning potential into performance and strategic insights into measurable success for our partners across India.
+                </p>
+
+                <div class="mt-10 flex justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#about-drives" class="px-8 py-3 rounded-full bg-primary text-white font-semibold shadow-lg shadow-primary/30 hover:shadow-xl hover:bg-primary/90 transition scroll-smooth">
+                        Learn More
+                    </a>
+                    <a href="services.html" class="px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary/10 dark:hover:bg-primary/10 transition">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-drives" class="relative py-24 bg-lightbackground dark:bg-darkbackground transition-colors">
+
+            <div class="max-w-5xl mx-auto px-6 text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-primary tracking-tight leading-tight">
+                    What Drives Growbird?
+                </h2>
+                <p class="mt-4 text-lg md:text-xl text-lightsubtext dark:text-darksubtext max-w-3xl mx-auto transition-colors">
+                    Our Vision, Mission & Values shaping India’s journey into a global business leader.
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center mb-32">
+                <div data-aos="fade-right" class="space-y-6">
+                    <h3 class="text-3xl md:text-4xl font-bold text-lighttext dark:text-white transition-colors">
+                        Our Vision 🌟
+                    </h3>
+                    <p class="text-lg md:text-xl text-lightsubtext dark:text-darksubtext leading-relaxed border-l-4 border-primary pl-4 transition-colors">
+                        Growbird wants to build an India that is not just a market, but the
+                        <span class="font-bold text-primary">Growth Capital of the world</span>,
+                        where Indian businesses rise as global leaders.
+                    </p>
+                    <p class="text-lg text-lightsubtext dark:text-darksubtext leading-relaxed transition-colors">
+                        We create an ecosystem for manufacturers, startups, and entrepreneurs to become
+                        global-ready, tech-enabled, and scalable.
+                    </p>
+                    <ul class="mt-3 space-y-2 text-lighttext dark:text-white text-lg leading-relaxed list-inside transition-colors">
+                        <li class="flex items-start"><span class="material-symbols-outlined text-primary mr-2">done</span> Every business grows from local to global</li>
+                        <li class="flex items-start"><span class="material-symbols-outlined text-primary mr-2">done</span> Talent has no limits and opportunities have no borders</li>
+                        <li class="flex items-start"><span class="material-symbols-outlined text-primary mr-2">done</span> Products evolve into global brands</li>
+                    </ul>
+                    <p class="mt-3 italic text-primary text-xl font-semibold">
+                        Our vision isn’t to imagine the future but to build it.
+                    </p>
+                </div>
+
+                <div data-aos="fade-left" class="relative">
+                    <div class="rounded-3xl shadow-2xl shadow-primary/20 bg-lightsurface dark:bg-darksurface overflow-hidden border border-gray-200 dark:border-gray-700 transform hover:scale-[1.02] transition-all duration-500">
+                        <img src="images/mkoi.jpg" alt="Vision: Global Growth" class="rounded-3xl w-full object-cover aspect-video" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center mb-32">
+
+                <div data-aos="fade-right" class="relative order-2 md:order-1">
+                    <div class="rounded-3xl shadow-2xl shadow-primary/20 bg-lightsurface dark:bg-darksurface overflow-hidden border border-gray-200 dark:border-gray-700 transform hover:scale-[1.02] transition-all duration-500">
+                        <img src="images/mission.jpg" alt="Mission: Strategic Partnership" class="rounded-3xl w-full object-cover aspect-video" />
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="order-1 md:order-2 space-y-6">
+                    <h3 class="text-3xl md:text-4xl font-bold text-lighttext dark:text-white transition-colors">Our Mission 🎯</h3>
+                    <p class="text-lg md:text-xl text-lightsubtext dark:text-darksubtext leading-relaxed border-l-4 border-primary pl-4 transition-colors">
+                        Growbird’s mission is to make India the world’s strongest Global Business Center,
+                        where every Indian builds a global identity, not just runs a business.
+                    </p>
+                    <p class="text-lg text-lightsubtext dark:text-darksubtext leading-relaxed transition-colors">
+                        Every manufacturer, entrepreneur, and young innovator has the potential to succeed internationally.
+                        Growbird unlocks it with the right systems, support, and speed.
+                    </p>
+                    <p class="text-lg text-lightsubtext dark:text-darksubtext leading-relaxed transition-colors">
+                        We stand behind every business as a trusted and strategic partner, turning local presence into global brand value.
+                    </p>
+                    <p class="mt-3 italic text-primary text-xl font-semibold">
+                        Growbird is not just part of the change — it is leading it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+                <div data-aos="fade-right" class="space-y-6">
+                    <h3 class="text-3xl md:text-4xl font-bold text-lighttext dark:text-white transition-colors mb-2">Our Values ❤️</h3>
+                    <p class="text-lg md:text-xl text-lightsubtext dark:text-darksubtext leading-relaxed transition-colors">
+                        At Growbird, our values guide every action, strategy, and decision:
+                    </p>
+                    <ul class="mt-4 space-y-3 text-lighttext dark:text-white text-lg leading-relaxed list-inside transition-colors">
+                        <li class="flex items-start"><span class="material-symbols-outlined text-primary mr-3">verified</span> <strong class="text-primary">Integrity</strong>: Honesty, transparency, and trust in every action.</li>
+                        <li class="flex items-start"><span class="material-symbols-outlined text-primary mr-3">verified</span> <strong class="text-primary">Innovation</strong>: Challenging norms and creating new growth paths.</li>
+                        <li class="flex items-start"><span class="material-symbols-outlined text-primary mr-3">verified</span> <strong class="text-primary">Impact</strong>: Strategies that create measurable, lasting results.</li>
+                        <li class="flex items-start"><span class="material-symbols-outlined text-primary mr-3">verified</span> <strong class="text-primary">Excellence</strong>: Pursuing world-class standards in all we do.</li>
+                    </ul>
+                    <p class="mt-3 italic text-primary text-xl font-semibold">
+                        These values are not statements — they define who we are.
+                    </p>
+                </div>
+
+                <div data-aos="fade-left" class="relative">
+                    <div class="rounded-3xl shadow-2xl shadow-primary/20 bg-lightsurface dark:bg-darksurface overflow-hidden border border-gray-200 dark:border-gray-700 transform hover:scale-[1.02] transition-all duration-500">
+                        <img src="images/rem.jpg" alt="Values: Team Collaboration" class="rounded-3xl w-full object-cover aspect-video" />
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="py-24 md:py-36 bg-lightsurface dark:bg-darksurface transition-colors">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-base uppercase tracking-widest font-extrabold text-primary">Our Legacy</span>
+                    <h2 class="mt-3 text-4xl font-extrabold text-lighttext dark:text-white sm:text-5xl transition-colors">
+                        Our Journey So Far 🚀
+                    </h2>
+                    <p class="mt-6 text-xl text-lightsubtext dark:text-darksubtext transition-colors">
+                        GrowBird India, founded in 2024, is a premier B2B business contracting and brand transformation firm. We partner with manufacturers, MNCs, and startups to build, develop, and scale businesses from the ground up, delivering end-to-end transformation, strategic market entry, and measurable growth.
+                    </p>
+                    <a href="ourprocess.html" class="inline-block mt-8 text-primary font-bold hover:text-accent transition-colors">
+                        View Our Success Stories
+                        <span class="material-symbols-outlined align-bottom text-xl">arrow_right_alt</span>
+                    </a>
+                </div>
+
+                <div class="space-y-10 relative" data-aos="fade-left">
+                    <div class="absolute left-7 top-0 bottom-0 w-1 bg-gray-300 dark:bg-gray-700 rounded-full hidden sm:block transition-colors"></div>
+
+                    <div class="flex items-start gap-6 relative">
+                        <div class="flex-shrink-0 h-16 w-16 flex items-center justify-center rounded-full font-extrabold text-lg shadow-xl border-4 border-lightsurface dark:border-darksurface z-10 bg-primary text-white transition-colors">2024</div>
+                        <div>
+                            <p class="text-xl font-bold text-lighttext dark:text-white transition-colors">Foundation & Core Mission</p>
+                            <p class="text-lightsubtext dark:text-darksubtext mt-1 transition-colors">Company founded with a clear mission to empower strategic business collaborations and managed growth.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 relative">
+                        <div class="flex-shrink-0 h-16 w-16 flex items-center justify-center rounded-full font-extrabold text-lg shadow-xl border-4 border-lightsurface dark:border-darksurface z-10 bg-primary text-white transition-colors">2024</div>
+                        <div>
+                            <p class="text-xl font-bold text-lighttext dark:text-white transition-colors">Rapid Expansion Phase</p>
+                            <p class="text-lightsubtext dark:text-darksubtext mt-1 transition-colors">Secured over 100+ high-value contracts and expanded client base across major metropolitan sectors nationwide.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 relative">
+                        <div class="flex-shrink-0 h-16 w-16 flex items-center justify-center rounded-full font-extrabold text-lg shadow-xl border-4 border-lightsurface dark:border-darksurface z-10 bg-primary text-white transition-colors">2025</div>
+                        <div>
+                            <p class="text-xl font-bold text-lighttext dark:text-white transition-colors">Tech & Innovation Focus</p>
+                            <p class="text-lightsubtext dark:text-darksubtext mt-1 transition-colors">Successfully integrated advanced data analytics and expanded consulting services into the high-growth tech sector.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 relative bg-lightbackground dark:bg-darkbackground transition-colors">
+            <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(236,19,19,0.3),transparent_70%)]"></div>
+
+            <div class="relative max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-primary">
+                        Why Choose GrowBird?
+                    </h2>
+                    <p class="mt-4 text-lg text-lightsubtext dark:text-darksubtext max-w-2xl mx-auto transition-colors">
+                        A complete, managed growth ecosystem built to scale your business — not just support it.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div data-aos="fade-up" class="group p-8 rounded-2xl bg-lightsurface dark:bg-darksurface border border-gray-200 dark:border-gray-700 shadow-xl shadow-black/10 dark:shadow-black/30 hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg mb-5">
+                            <span class="material-symbols-outlined text-3xl">groups</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lighttext dark:text-white transition-colors">We Work as Your Sales Team</h3>
+                        <p class="text-lightsubtext dark:text-darksubtext transition-colors">No hiring, no training, no management — we handle everything. Seamless integration with your business.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="80" class="group p-8 rounded-2xl bg-lightsurface dark:bg-darksurface border border-gray-200 dark:border-gray-700 shadow-xl shadow-black/10 dark:shadow-black/30 hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg mb-5">
+                            <span class="material-symbols-outlined text-3xl">payments</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lighttext dark:text-white transition-colors">One Predictable Monthly Budget</h3>
+                        <p class="text-lightsubtext dark:text-darksubtext transition-colors">Affordable, predictable, and significantly more cost-effective than building an internal team.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="160" class="group p-8 rounded-2xl bg-lightsurface dark:bg-darksurface border border-gray-200 dark:border-gray-700 shadow-xl shadow-black/10 dark:shadow-black/30 hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg mb-5">
+                            <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lighttext dark:text-white transition-colors">End-to-End Growth System</h3>
+                        <p class="text-lightsubtext dark:text-darksubtext transition-colors">Sales, Marketing, Branding, Digital, and Field Execution — a unified, powerful strategy.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="240" class="group p-8 rounded-2xl bg-lightsurface dark:bg-darksurface border border-gray-200 dark:border-gray-700 shadow-xl shadow-black/10 dark:shadow-black/30 hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg mb-5">
+                            <span class="material-symbols-outlined text-3xl">badge</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lighttext dark:text-white transition-colors">Elite Professional Expertise</h3>
+                        <p class="text-lightsubtext dark:text-darksubtext transition-colors">Access to highly skilled experts executing through rigorous, structured growth systems.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="320" class="group p-8 rounded-2xl bg-lightsurface dark:bg-darksurface border border-gray-200 dark:border-gray-700 shadow-xl shadow-black/10 dark:shadow-black/30 hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg mb-5">
+                            <span class="material-symbols-outlined text-3xl">trending_up</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lighttext dark:text-white transition-colors">Measurable Real Results</h3>
+                        <p class="text-lightsubtext dark:text-darksubtext transition-colors">Focus on tangible outcomes: more customers, higher conversions, stronger brand equity.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="400" class="group p-8 rounded-2xl bg-lightsurface dark:bg-darksurface border border-gray-200 dark:border-gray-700 shadow-xl shadow-black/10 dark:shadow-black/30 hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg mb-5">
+                            <span class="material-symbols-outlined text-3xl">visibility</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-lighttext dark:text-white transition-colors">Complete Transparency</h3>
+                        <p class="text-lightsubtext dark:text-darksubtext transition-colors">Daily and weekly reporting gives you clear, real-time visibility into all progress and performance metrics.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-8 flex justify-center py-16 bg-lightsurface dark:bg-darksurface transition-colors" data-aos="zoom-in">
+            <iframe class="rounded-2xl shadow-2xl shadow-black/50 border-4 border-primary/20" width="800" height="450" src="https://www.youtube.com/embed/f7PCBtpbUrI?rel=0&modestbranding=1" title="GrowBird Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+
+
+        <section class="py-24 bg-lightbackground dark:bg-darkbackground transition-colors">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-extrabold text-primary">Meet Our Leadership</h2>
+                <p class="mt-3 text-lg text-lightsubtext dark:text-darksubtext transition-colors">Our leaders guide vision with innovation and decades of strategic experience.</p>
+
+                <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 justify-center">
+                    <div data-aos="fade-up" class="bg-lightsurface dark:bg-darksurface rounded-2xl p-6 shadow-xl shadow-black/10 dark:shadow-black/30 hover:shadow-primary/30 hover:-translate-y-1 transition border border-gray-200 dark:border-gray-700" role="button" tabindex="0" onclick="openModal('Manoj Bhai Joshi','Founder & CEO','40+ years of expertise in large-scale business operations, manufacturing, and strategic market development.','images/WhatsApp Image 2025-11-20 at 2.56.39 PM.jpeg')">
+                        <img src="images/WhatsApp Image 2025-11-20 at 2.56.39 PM.jpeg" alt="Manoj Bhai Joshi" class="mx-auto h-40 w-40 rounded-full object-cover border-4 border-primary/50" loading="lazy" />
+                        <h3 class="mt-6 text-xl font-bold text-lighttext dark:text-white transition-colors">Manoj Bhai Joshi</h3>
+                        <p class="text-primary font-semibold">Founder & CEO</p>
+                        <p class="mt-3 text-lightsubtext dark:text-darksubtext transition-colors">True leadership is built on experience, clarity, and courage.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="100" class="bg-lightsurface dark:bg-darksurface rounded-2xl p-6 shadow-xl shadow-black/10 dark:shadow-black/30 hover:shadow-primary/30 hover:-translate-y-1 transition border border-gray-200 dark:border-gray-700" role="button" tabindex="0" onclick="openModal('Kuldeep Singh','Founder & CEO','13 years of expertise in modern digital transformation, sales automation, and scaling B2B ventures globally.','images/Kuldeep Singh.jpg')">
+                        <img src="images/Kuldeep Singh.jpg" alt="Kuldeep Singh" class="mx-auto h-40 w-40 rounded-full object-cover border-4 border-primary/50" loading="lazy" />
+                        <h3 class="mt-6 text-xl font-bold text-lighttext dark:text-white transition-colors">Kuldeep Singh</h3>
+                        <p class="text-primary font-semibold">Founder & CEO</p>
+                        <p class="mt-3 text-lightsubtext dark:text-darksubtext transition-colors">Visionary entrepreneur focused on driving systemic change.</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="200" class="hidden lg:block bg-lightsurface dark:bg-darksurface rounded-2xl p-6 shadow-xl shadow-black/10 dark:shadow-black/30 border border-gray-200 dark:border-gray-700 transition-colors">
+                        <div class="mx-auto h-40 w-40 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center border-4 border-gray-400/50">
+                            <span class="material-symbols-outlined text-5xl text-gray-500">person_add</span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-500">Join Our Team</h3>
+                        <p class="text-lightsubtext dark:text-darksubtext font-semibold transition-colors">Director of Strategy</p>
+                        <p class="mt-3 text-gray-500">Future-proofing our vision with the best talent.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="leaderModal" class="fixed inset-0 hidden items-center justify-center z-50 p-6 bg-black/80 backdrop-blur-sm">
+                <div class="bg-lightsurface dark:bg-darksurface rounded-2xl max-w-lg w-full p-8 relative shadow-2xl border border-gray-200 dark:border-gray-700 transition-colors">
+                    <button aria-label="Close modal" onclick="closeModal()" class="absolute top-4 right-4 text-lighttext dark:text-white text-3xl opacity-70 hover:opacity-100 transition">&times;</button>
+                    <img id="modalImage" src="" alt="leader" class="mx-auto h-40 w-40 rounded-full object-cover border-4 border-primary/50 mb-6" />
+                    <h3 id="modalName" class="text-2xl font-bold text-center text-lighttext dark:text-white transition-colors"></h3>
+                    <p id="modalRole" class="text-primary text-center font-semibold mb-4"></p>
+                    <p id="modalIntro" class="text-lightsubtext dark:text-darksubtext text-center text-lg leading-relaxed transition-colors"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-36 bg-lightsurface dark:bg-darksurface transition-colors">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center bg-primary text-white rounded-3xl p-16 shadow-2xl shadow-primary/60" data-aos="zoom-in">
+                <h2 class="text-5xl font-extrabold leading-tight">Join Our Growth Story Today</h2>
+                <p class="mt-4 text-xl text-red-100 max-w-xl mx-auto">Ready to experience managed execution that delivers real results? Let’s turn your business vision into reality together.</p>
+                <a href="contact.html" class="inline-block mt-10 bg-white text-primary font-extrabold px-10 py-4 rounded-full text-lg hover:scale-[1.03] transition shadow-2xl shadow-black/40">
+                    Contact Us Today
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-lightsurface dark:bg-black text-gray-500 dark:text-gray-300 py-12 border-t border-gray-200 dark:border-gray-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div>
+                <img id="footer-logo" src="images/grow bird logo WHITE.png" alt="GrowBird" class="h-10 mb-3" />
+                <p class="text-gray-500">Visionary Growth, Managed Execution.</p>
+                <div class="flex gap-4 mt-4">
+                    <a href="#" aria-label="LinkedIn" class="hover:text-primary transition-colors">LinkedIn</a>
+                    <a href="#" aria-label="Twitter" class="hover:text-primary transition-colors">Twitter</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-3 text-lighttext dark:text-white">Quick Links</h4>
+                <ul class="text-gray-500 space-y-2">
+                    <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+                    <li><a href="ourprocess.html" class="hover:text-primary transition-colors">Case Studies</a></li>
+                    <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-3 text-lighttext dark:text-white">Services</h4>
+                <ul class="text-gray-500 space-y-2">
+                    <li>Strategic Planning</li>
+                    <li>Operational Management</li>
+                    <li>Market Expansion</li>
+                    <li>Brand Transformation</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-3 text-lighttext dark:text-white">Get in Touch</h4>
+                <ul class="text-gray-500 space-y-2">
+                    <li class="flex items-center"><span class="material-symbols-outlined text-primary text-lg mr-2">mail</span> growbird.official@gmail.com</li>
+                    <li class="flex items-center"><span class="material-symbols-outlined text-primary text-lg mr-2">call</span> +91 95993 79067</li>
+                    <li class="flex items-center"><span class="material-symbols-outlined text-primary text-lg mr-2">location_on</span> Mumbai, Maharashtra, India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center text-sm text-gray-400 dark:text-gray-600">© 2025 GrowBird India. All rights reserved.</div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Modal functions
+        function openModal(name, role, intro, imageSrc) {
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalRole').textContent = role;
+            document.getElementById('modalIntro').textContent = intro;
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('leaderModal').classList.remove('hidden');
+            document.getElementById('leaderModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('leaderModal').classList.add('hidden');
+            document.getElementById('leaderModal').classList.remove('flex');
+        }
+
+        // --- Main DOM Script ---
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* -------------------------------
+                AOS Animation Init
+            ----------------------------------*/
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+
+            /* -------------------------------
+                Elements
+            ----------------------------------*/
+            const header = document.getElementById('main-header');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const siteLogo = document.getElementById('site-logo');
+            const footerLogo = document.getElementById('footer-logo');
+
+            // Logo switching paths (assuming these images exist)
+            const lightLogoPath = "images/grow bird logo option 02.png"; // Original red/black logo (for Light Mode)
+            const darkLogoPath = "images/grow bird logo grey.png"; // White/Grey logo (for Dark Mode Header)
+            const footerDarkLogoPath = "images/grow bird logo WHITE.png"; // White logo (for Dark Mode Footer)
+            const footerLightLogoPath = "images/grow bird logo option 02.png"; // Red/Black logo (for Light Mode Footer)
+
+            /* -------------------------------
+                DARK MODE + LOGO HANDLER
+            ----------------------------------*/
+            function updateLogo(isDark) {
+                // Header Logo
+                siteLogo.src = isDark ? darkLogoPath : lightLogoPath;
+
+                // Footer Logo 
+                // We assume the footer color should generally match the overall theme for the text/element contrast
+                // The footer's actual background (bg-black/bg-lightsurface) is managed by Tailwind CSS classes.
+                footerLogo.src = isDark ? footerDarkLogoPath : footerLightLogoPath;
+
+                // Header BG Class Management for color transition and border
+                if (isDark) {
+                    header.classList.remove('bg-white/80', 'border-gray-200/50');
+                    header.classList.add('bg-black/80', 'dark:bg-black/80', 'border-gray-700/50');
+                } else {
+                    header.classList.remove('bg-black/80', 'dark:bg-black/80', 'border-gray-700/50');
+                    header.classList.add('bg-white/80', 'border-gray-200/50');
+                }
+            }
+
+            function setDarkMode(isDark) {
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.textContent = 'light_mode'; // Icon to switch to light mode
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.textContent = 'dark_mode'; // Icon to switch to dark mode
+                }
+                updateLogo(isDark);
+            }
+
+            // Load saved theme or default: dark
+            const savedTheme = localStorage.getItem('theme');
+            
+            // Default to dark mode if no preference is saved (since the dark theme is the primary aesthetic)
+            let defaultToDark = true; 
+
+            if (savedTheme) {
+                setDarkMode(savedTheme === 'dark');
+            } else {
+                setDarkMode(defaultToDark);
+            }
+
+
+            // Toggle theme listener
+            themeToggle.addEventListener('click', () => {
+                const isCurrentlyDark = document.documentElement.classList.contains('dark');
+                setDarkMode(!isCurrentlyDark);
+            });
+
+            /* -------------------------------
+                MOBILE MENU FUNCTION
+            ----------------------------------*/
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.querySelector('.material-symbols-outlined').textContent =
+                    mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+            });
+
+            // Close menu when clicking links
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'menu';
+                });
+            });
+
+            /* -------------------------------
+                HEADER SCROLL SHADOW
+            ----------------------------------*/
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-xl', 'shadow-black/50', 'dark:shadow-black/50');
+                } else {
+                    header.classList.remove('shadow-xl', 'shadow-black/50', 'dark:shadow-black/50');
+                }
+            });
+
+        }); // DOMContentLoaded END
+    </script>
+</body>
+
+</html>

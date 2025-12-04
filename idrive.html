@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - GrowBird India</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#ec1313",
+                        accent: "#ef4444",
+                        background: "#fafafa",
+                        surface: "#ffffff",
+                        // CONVERTED TO BLACK THEME
+                        darkbackground: "#000000", 
+                        darksurface: "#1A1A1A", 
+                        // END CONVERSION
+                        subtext: "#6b7280",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+       <style>
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                "FILL" 0,
+                "wght" 600,
+                "GRAD" 0,
+                "opsz" 24;
+        }
+
+        header {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        html.dark header {
+            background-color: #000000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body id="body-content" class="bg-background text-gray-800 dark:bg-darkbackground dark:text-gray-200 font-display">
+    <header id="main-header"
+        class="fixed top-0 z-50 w-full bg-white dark:bg-black backdrop-blur-xl border-b border-gray-200/60 dark:border-gray-700/60 shadow transition-shadow duration-300">
+        <div class="max-w-7xl mx-auto flex items-center h-20 px-4 lg:px-8">
+           <a href="index.html" class="flex items-center gap-2">
+    <img id="brand-logo" class="h-12 w-auto" 
+         src="images/grow bird logo option 02.png"
+         alt="GrowBird India Logo" />
+</a>
+
+            <nav class="hidden md:flex flex-1 justify-center items-center gap-0 ml-10">
+                <a class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none"
+                    href="index.html">Home
+                    <span
+                        class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+                </a>
+                <a class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none"
+                    href="about.html">About Us
+                    <span
+                        class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+                </a>
+                <a class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none"
+                    href="ourprocess.html">Case Studies
+                    <span
+                        class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+                </a>
+                 <a href="ourwork.html"
+   class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300
+   transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+   Our Work
+</a>
+                <a class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none"
+                    href="services.html">Services
+                    <span
+                        class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+                </a>
+                <a href="idrive.html"
+                class="group relative px-4 py-2 text-sm font-semibold transition-colors duration-300
+                text-medium-gray dark:text-gray-300 hover:text-primary dark:hover:text-primary">
+                iDrive
+                <span class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-red-600 to-primary
+                scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+            </a>
+                <a class="group relative px-4 py-2 text-sm font-semibold text-medium-gray dark:text-gray-300 transition-colors duration-300 hover:text-primary dark:hover:text-primary focus:outline-none"
+                    href="contact.html">Contact
+                    <span
+                        class="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary via-deep-red to-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+                </a>
+            </nav>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode"
+                class="ml-4 p-2 rounded-full text-charcoal dark:text-gray-300 hover:bg-light-gray dark:hover:bg-charcoal/40 transition-colors shadow focus:outline-none">
+                <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+            </button>
+         
+            <button id="mobile-menu-button"
+                class="md:hidden flex items-center justify-center p-2 ml-2 rounded-full text-charcoal dark:text-gray-100 hover:bg-light-gray dark:hover:bg-charcoal/40 transition-colors">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+        <nav id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 shadow-lg pb-3">
+            <div class="flex flex-col items-center gap-1 py-2 animate-slideDown">
+                <a class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all"
+                    href="index.html">Home</a>
+                <a class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all"
+                    href="about.html">About Us</a>
+                <a class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all"
+                    href="ourprocess.html">Case Studies</a>
+                <a class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all"
+                    href="services.html">Services</a>
+                <a class="w-full text-center py-3 text-sm font-semibold text-medium-gray dark:text-gray-300 hover:text-primary hover:bg-light-gray dark:hover:text-primary dark:hover:bg-charcoal/30 transition-all"
+                    href="contact.html">Contact</a>
+                <a href="#contact"
+                    class="mt-2 text-center py-3 px-6 w-11/12 bg-primary text-white text-base font-bold rounded-lg shadow hover:bg-gradient-to-r hover:from-deep-red hover:to-primary transition-all mb-2">Get
+                    a Quote</a>
+            </div>
+        </nav>
+    </header>
+<main>
+<!-- Hero Section -->
+<!-- Hero Section with Full Background Carousel -->
+<section class="relative py-20 sm:py-24 lg:py-32 overflow-hidden">
+
+    <!-- Background Carousel -->
+    <div class="absolute inset-0 z-0">
+        <div class="carousel-bg absolute inset-0 w-full h-full"></div>
+        <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+
+    <div class="relative container mx-auto px-6 z-10">
+        <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-8 items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="flex flex-col justify-center gap-8 text-center lg:text-left">
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-white"
+                        style="text-shadow: 2px 2px 12px rgba(0,0,0,0.7);">
+                        Growbird iDrive <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-pink-500 to-yellow-400">Your Business.</span> Fully Managed.
+                    </h1>
+
+                    <p class="max-w-xl text-lg text-white/90 mx-auto lg:mx-0" style="text-shadow: 1px 1px 8px rgba(0,0,0,0.7);">
+                        A unified Sales, Marketing, and Growth system designed to transform your business 
+                        from guesswork to system-driven growth.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+                    <div class="flex h-10 items-center gap-x-2 rounded-full border border-white/30 bg-white/10 px-4 py-1 backdrop-blur-md">
+                        <span class="material-symbols-outlined text-primary text-base">trending_up</span>
+                        <p class="text-sm font-medium text-white">System-Driven Growth</p>
+                    </div>
+
+                    <div class="flex h-10 items-center gap-x-2 rounded-full border border-white/30 bg-white/10 px-4 py-1 backdrop-blur-md">
+                        <span class="material-symbols-outlined text-primary text-base">smart_toy</span>
+                        <p class="text-sm font-medium text-white">AI-Powered Strategy</p>
+                    </div>
+
+                    <div class="flex h-10 items-center gap-x-2 rounded-full border border-white/30 bg-white/10 px-4 py-1 backdrop-blur-md">
+                        <span class="material-symbols-outlined text-primary text-base">layers</span>
+                        <p class="text-sm font-medium text-white">Full-Stack Execution</p>
+                    </div>
+                </div>
+
+                <!-- Corrected Button -->
+              <!-- Corrected Button -->
+<div class="flex justify-center">
+    <button
+        class="inline-flex items-center justify-center h-12 px-6 bg-primary text-white text-base font-bold rounded-lg shadow-lg shadow-primary/40 hover:scale-105 transition-transform">
+        <span class="truncate">Get Started</span>
+    </button>
+</div>
+
+            </div>
+
+            <!-- RIGHT IMAGE (BIG) -->
+            <div class="flex justify-center items-center">
+                <img src="images/WhatsApp Image 2025-11-24 at 4.33.43 PM (3).jpeg"
+                     class="w-full max-w-xl h-[400px] sm:h-[480px] md:h-[520px] lg:h-[620px] object-cover rounded-2xl shadow-2xl border border-white/20">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Background Carousel Script -->
+<script>
+    const carouselImages = [
+        "images/ui.png",
+        "images/iop.png",
+        "images/IO.png"
+    ];
+
+    let currentIndex = 0;
+    const carouselDiv = document.querySelector(".carousel-bg");
+
+    function updateCarousel() {
+        carouselDiv.style.backgroundImage = `url(${carouselImages[currentIndex]})`;
+        carouselDiv.style.backgroundSize = "cover";
+        carouselDiv.style.backgroundPosition = "center";
+        carouselDiv.style.opacity = "1";
+        carouselDiv.style.transition = "opacity 1.5s ease-in-out";
+
+        currentIndex = (currentIndex + 1) % carouselImages.length;
+    }
+
+    updateCarousel();
+    setInterval(() => {
+        carouselDiv.style.opacity = "0";
+        setTimeout(updateCarousel, 1500);
+    }, 4500);
+</script>
+
+
+<!-- 4-Step iDrive Flow Section -->
+<section class="py-20 sm:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900/50">
+<div class="container mx-auto px-6">
+<div class="max-w-2xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              The 4-Step iDrive Flow
+            </h2>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+              Our proven methodology ensures a seamless transition from strategy to execution, delivering measurable results at every stage.
+            </p>
+</div>
+<div class="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+<!-- Dotted line for desktop -->
+<div class="absolute left-0 top-1/2 -mt-px hidden w-full -translate-y-12 lg:block">
+<div class="mx-auto w-[calc(100%-20rem)] border-t-2 border-dashed border-primary/30"></div>
+</div>
+<!-- Vertical lines for mobile/tablet -->
+<div class="absolute left-1/2 -ml-px top-0 hidden h-full w-px -translate-x-12 bg-primary/30 md:block lg:hidden"></div>
+<div class="relative flex flex-col items-center text-center">
+<div class="absolute -top-12 z-10 flex h-24 w-24 items-center justify-center rounded-full border-4 border-primary bg-background-light dark:bg-background-dark">
+<span class="material-symbols-outlined text-primary text-4xl">search</span>
+</div>
+<div class="mt-16 w-full rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 pt-12 shadow-lg shadow-primary/5">
+<p class="text-sm font-bold text-primary">STEP 1</p>
+<p class="mt-2 text-lg font-bold text-gray-900 dark:text-white">Audit &amp; Planning</p>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Understanding your landscape and creating a bespoke growth strategy.</p>
+</div>
+</div>
+<div class="relative flex flex-col items-center text-center">
+<div class="absolute -top-12 z-10 flex h-24 w-24 items-center justify-center rounded-full border-4 border-primary bg-background-light dark:bg-background-dark">
+<span class="material-symbols-outlined text-primary text-4xl">groups</span>
+</div>
+<div class="mt-16 w-full rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 pt-12 shadow-lg shadow-primary/5">
+<p class="text-sm font-bold text-primary">STEP 2</p>
+<p class="mt-2 text-lg font-bold text-gray-900 dark:text-white">Team Deployment</p>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Assembling the right expertise and resources for your specific goals.</p>
+</div>
+</div>
+<div class="relative flex flex-col items-center text-center">
+<div class="absolute -top-12 z-10 flex h-24 w-24 items-center justify-center rounded-full border-4 border-primary bg-background-light dark:bg-background-dark">
+<span class="material-symbols-outlined text-primary text-4xl">settings</span>
+</div>
+<div class="mt-16 w-full rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 pt-12 shadow-lg shadow-primary/5">
+<p class="text-sm font-bold text-primary">STEP 3</p>
+<p class="mt-2 text-lg font-bold text-gray-900 dark:text-white">Daily Execution</p>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Implementing the strategy with precision across all channels.</p>
+</div>
+</div>
+<div class="relative flex flex-col items-center text-center">
+<div class="absolute -top-12 z-10 flex h-24 w-24 items-center justify-center rounded-full border-4 border-primary bg-background-light dark:bg-background-dark">
+<span class="material-symbols-outlined text-primary text-4xl">monitoring</span>
+</div>
+<div class="mt-16 w-full rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 pt-12 shadow-lg shadow-primary/5">
+<p class="text-sm font-bold text-primary">STEP 4</p>
+<p class="mt-2 text-lg font-bold text-gray-900 dark:text-white">Reporting &amp; Optimization</p>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Continuously tracking performance and refining for maximum impact.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Updated Case Studies Section with ENER-G and G9 Companies -->
+<!--
+Full updated code with:
+- Accessible responsive modal with Tabs (Overview / Services / Free Dealer Services / Engine Checklist
+  / Polishing & Rubbing / Washing & Cleaning / iDrive Operational Model / Results)
+- Works well in Light & Dark themes (uses theme tokens, good contrast in light mode)
+- Scrollable modal body, keyboard accessible, closes on ESC and clicking backdrop
+- Contains full G9 content you provided and a matching ENER-G case study section
+-->
+
+<section class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] sm:text-4xl text-text-light dark:text-text-dark">
+        Real Growth. Real Execution. Real Results.
+      </h2>
+      <p class="mt-2 text-lg text-text-light/70 dark:text-text-dark/70">
+        Explore our case studies with Growbird iDrive™
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- ENER-G Card -->
+      <div class="flex flex-col bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-300">
+        <div class="p-6 flex-grow">
+          <span class="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-3">
+            Automotive Service
+          </span>
+          <h3 class="text-xl font-bold mb-2">ENER-G: Multi-Vehicle Service Optimization</h3>
+          <p class="text-sm text-text-light/70 dark:text-text-dark/70 mb-4">
+            ENER-G needed a complete workflow transformation to increase service efficiency and customer satisfaction.
+          </p>
+          <div class="space-y-3 text-sm">
+            <p><strong>Intervention:</strong> Implemented iDrive workforce, digital SOPs & live tracking dashboard.</p>
+            <p><strong>Outcome:</strong> Improved service speed by 
+              <span class="font-bold text-primary">95%</span> and boosted customer retention by 
+              <span class="font-bold text-primary">80%</span>.
+            </p>
+          </div>
+        </div>
+        <div class="p-6 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark">
+          <button class="font-semibold text-primary hover:underline" type="button" onclick="openModal('ener-g')">Read Full Story →</button>
+        </div>
+      </div>
+
+      <!-- G9 Card -->
+      <div class="flex flex-col bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-300">
+        <div class="p-6 flex-grow">
+          <span class="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-3">2W/4W Workstation</span>
+          <h3 class="text-xl font-bold mb-2">G9 Mumbai: Vehicle Workstation Transformation</h3>
+          <p class="text-sm text-text-light/70 dark:text-text-dark/70 mb-4">
+            G9 needed a structured servicing model for 2-wheelers & 4-wheelers with optimized workflow & reporting.
+          </p>
+          <div class="space-y-3 text-sm">
+            <p><strong>Intervention:</strong> Process flow optimization, bay management & digital monitoring.</p>
+            <p><strong>Outcome:</strong> Daily service output up by 
+              <span class="font-bold text-primary">80%</span> and customer experience improved.
+            </p>
+          </div>
+        </div>
+        <div class="p-6 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark">
+          <button class="font-semibold text-primary hover:underline" type="button" onclick="openModal('g9')">Read Full Story →</button>
+        </div>
+      </div>
+
+      <!-- Coming Soon -->
+      <div class="flex flex-col bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-300">
+        <div class="p-6 flex-grow">
+          <span class="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-3">Coming Soon</span>
+          <h3 class="text-xl font-bold mb-2">Add Your Next Case Study</h3>
+          <p class="text-sm text-text-light/70 dark:text-text-dark/70 mb-4">
+            New case studies will appear here as your business expands.
+          </p>
+        </div>
+        <div class="p-6 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark">
+          <span class="font-semibold text-primary">Coming Soon →</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal (single modal used for both case studies; content swapped) -->
+<div id="caseModal" class="fixed inset-0 z-50 hidden items-start justify-center overflow-y-auto px-4 py-10">
+  <!-- Backdrop -->
+  <div id="modalBackdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+
+  <!-- Modal box -->
+  <div id="modalBox" role="dialog" aria-modal="true"
+       class="relative z-50 mx-auto w-full max-w-4xl rounded-2xl shadow-2xl transition-transform transform scale-95
+              bg-white text-gray-800 dark:bg-card-dark dark:text-text-dark ring-1 ring-black/5 dark:ring-white/5">
+    <!-- Header -->
+    <div class="flex items-start justify-between gap-4 p-6 border-b border-border-light dark:border-border-dark">
+      <div>
+        <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 dark:text-white">Case Study</h3>
+        <p id="modalSubtitle" class="mt-1 text-sm text-gray-600 dark:text-text-dark/70">Overview</p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="themeHint" class="hidden text-sm text-gray-500 dark:text-gray-300">Light/Dark</button>
+        <button id="closeModalBtn" aria-label="Close" class="text-2xl font-bold text-gray-600 dark:text-gray-300 hover:text-primary">×</button>
+      </div>
+    </div>
+
+    <!-- Tab navigation -->
+    <div class="px-6 pt-4">
+      <nav id="modalTabs" class="flex gap-2 overflow-x-auto pb-2">
+        <!-- Tabs generated in JS -->
+      </nav>
+    </div>
+
+    <!-- Content area -->
+    <div class="px-6 pb-6">
+      <div id="modalBody" class="max-h-[60vh] overflow-auto pt-4 pr-2 text-sm leading-relaxed">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="flex items-center justify-between gap-4 p-4 border-t border-border-light dark:border-border-dark">
+      <div class="text-xs text-gray-500 dark:text-text-dark/70">Growbird iDrive™ — Operational case study</div>
+      <div class="flex gap-2">
+        <button class="px-4 py-2 rounded-md text-sm font-medium bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-gray-700" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- Data: content for G9 and ENER-G ---------- */
+const caseData = {
+  'g9': {
+    id: 'g9',
+    title: 'G9 Mumbai Case Study',
+    subtitle: 'Your Ultimate Vehicle Workstation (Mumbai)',
+    tabs: [
+      { key: 'overview', label: 'Overview' },
+      { key: 'services', label: 'Services' },
+      { key: 'free-dealer', label: 'Free Dealer Services' },
+      { key: 'engine', label: 'Engine Checklist' },
+      { key: 'polish', label: 'Polishing & Rubbing' },
+      { key: 'washing', label: 'Washing & Cleaning' },
+      { key: 'idrive', label: 'iDrive Operational Model' },
+      { key: 'results', label: 'Results' }
+    ],
+    content: {
+      overview: `
+        <h4 class="text-lg font-semibold mb-2">G9: Your Ultimate Vehicle Workstation (Mumbai) 🇮🇳</h4>
+        <p class="mb-3">Transforming vehicle maintenance with world-class service and dedicated craftsmanship. G9 is a premier 2-wheeler and 4-wheeler maintenance and repairing workstation located in the heart of Mumbai, Maharashtra.</p>
+        <p class="mb-3">We understand that your vehicle is more than just transport—it's an asset. At G9, we offer a comprehensive suite of services designed to keep your vehicle running flawlessly, looking brand new, and performing at its peak.</p>
+      `,
+      services: `
+        <h4 class="text-lg font-semibold mb-2">Core Services</h4>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Routine Maintenance & Service</strong>: Expert mechanical checks and scheduled servicing for reliability.</li>
+          <li><strong>Accidental Repairing</strong>: Full-spectrum damage assessment and collision restoration.</li>
+          <li><strong>Denting & Painting</strong>: Flawless bodywork restoration and perfect color matching.</li>
+          <li><strong>Washing & Detailing</strong>: Deep cleaning, interior sanitization, and exterior revival.</li>
+          <li><strong>Polishing & Restoring</strong>: Removing swirl marks, enhancing paint depth, restoring showroom finish.</li>
+          <li><strong>Free Pick & Drop</strong> and <strong>Roadside Assist (5km)</strong> for quick help.</li>
+        </ul>
+      `,
+      'free-dealer': `
+        <h4 class="text-lg font-semibold mb-2">Free Services for Pre-Owned Car Dealers</h4>
+        <p class="mb-2">Full interior clean & detailing checklist (delivered as standard for pre-owned dealer partners):</p>
+        <ol class="list-decimal pl-5 space-y-2 mb-4">
+          <li><strong>Dashboard & Controls</strong>: trims, steering, gear lever, handbrake, AC vents, switches, glove box.</li>
+          <li><strong>Seats & Belts</strong>: Front & rear seats, stitching lines, rails, headrests, belts (strap + buckle).</li>
+          <li><strong>Doors & Side Panels</strong>: panels, armrests, pockets, window switches, rubber beading.</li>
+          <li><strong>Glass & Mirrors</strong>: inside windshield, side windows, inside mirrors, visor mirrors.</li>
+          <li><strong>Pillars & Roof Area</strong>: A/B/C/D pillars, roof liner, grab handles, cabin lights.</li>
+          <li><strong>Center Console & Infotainment</strong>: touchscreen, AC controls, USB ports, cup holders, armrest box.</li>
+          <li><strong>Floor & Foot Area</strong>: mats, carpet vacuum & shampoo, pedals, door sill plates.</li>
+          <li><strong>Rear Cabin & Boot</strong>: rear armrest, boot liner, spare wheel area.</li>
+          <li><strong>Air & Hidden Spots</strong>: AC vents, under-dash corners, speaker grills.</li>
+          <li><strong>Final Detailing</strong>: fragrance, dashboard polish, leather conditioner, sanitization spray.</li>
+        </ol>
+      `,
+      engine: `
+        <h4 class="text-lg font-semibold mb-2">Engine Service (Quick Checklist)</h4>
+        <ol class="list-decimal pl-5 space-y-2 mb-4">
+          <li><strong>Oils & Filters</strong>: Engine oil, oil filter, cabin filter, air filter.</li>
+          <li><strong>Cooling System</strong>: Coolant, radiator hoses, thermostat, water pump check.</li>
+          <li><strong>Electrical & Ignition</strong>: Battery terminals, spark plugs, ignition coil check, basic sensor checks.</li>
+          <li><strong>Belts & Pulleys</strong>: Drive/serpentine belt, timing belt/chain, tensioner & pulleys.</li>
+          <li><strong>Fuel & Intake</strong>: Fuel pump, injectors, throttle body cleaning, intake inspection.</li>
+          <li><strong>Mounts & Fluids</strong>: Engine mounts, transmission fluid, brake fluid, power steering fluid, clutch fluid.</li>
+          <li><strong>Final Engine Inspection</strong>: Leak check, belt noise, idle, warning light scan.</li>
+        </ol>
+      `,
+      polish: `
+        <h4 class="text-lg font-semibold mb-2">Exterior Rubbing & Polishing</h4>
+        <p class="mb-2">Detailed scope by area:</p>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Front</strong>: Bonnet, front bumper, headlight edges, front fenders.</li>
+          <li><strong>Side Panels</strong>: Front doors, rear doors, mirrors, quarter panels, fuel lid, B/C pillars.</li>
+          <li><strong>Rear</strong>: Boot, rear bumper, chrome trims.</li>
+          <li><strong>Upper Body</strong>: Roof, sunroof, shark fin antenna.</li>
+          <li><strong>Trim & Shine</strong>: Chrome parts, logos, emblems, glossy trims.</li>
+        </ul>
+      `,
+      washing: `
+        <h4 class="text-lg font-semibold mb-2">Exterior Car Washing & Cleaning</h4>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+          <li>High-pressure foam wash, full body shampoo & hand scrub.</li>
+          <li>Bug, tar & contamination removal, tyre & alloy deep cleaning.</li>
+          <li>Wheel arch & lower body cleaning, door edges & fuel lid cleaning.</li>
+          <li>Pressure rinse (spot-free), microfiber towel drying, glass & mirror cleaning.</li>
+        </ul>
+      `,
+      idrive: `
+        <h4 class="text-lg font-semibold mb-2">How Growbird iDrive Handled G9 Operations (Operational Model)</h4>
+        <p class="mb-3">Growbird iDrive implemented a structured, measurable, and repeatable operations model. Key elements below:</p>
+        <ul class="list-disc pl-5 space-y-2 mb-4">
+          <li><strong>1. Intake & Triage</strong> — Standardized customer intake forms (digital), damage assessment checklist, priority tagging (urgent, same-day, scheduled).</li>
+          <li><strong>2. Bay & Technician Allocation</strong> — Dynamic bay assignment based on vehicle type & task complexity; skill-based technician assignment; live bay occupancy dashboard for supervisors.</li>
+          <li><strong>3. Digital SOPs & Task Cards</strong> — Step-by-step SOPs for each service (washing, denting, engine checks), accessible on tablets; each job uses a timestamped task card to track cycle time.</li>
+          <li><strong>4. Real-time Updates & Media</strong> — Photo/video capture for critical steps (real-time oil change video, parts replacement updates) sent to customer via link; creates trust & reduces disputes.</li>
+          <li><strong>5. Inventory & Parts Flow</strong> — Integrated parts-picking workflow with reorder alerts for consumables; barcode-assisted parts issuance to jobs to reduce wastage.</li>
+          <li><strong>6. Quality Gate & Handover</strong> — Multi-point quality checks (technical + cosmetic) before delivery; final QA sign-off recorded digitally with timestamp and technician ID.</li>
+          <li><strong>7. Feedback & Retention</strong> — Automated SMS/email NPS & short feedback forms after delivery; scheduled follow-ups for retention and repeat service offers.</li>
+          <li><strong>8. Metrics & Continuous Improvement</strong> — Daily dashboards for throughput, turnaround time (TAT), rework rates, revenue per bay; weekly Kaizen meetings to remove bottlenecks.</li>
+        </ul>
+        <p class="mb-2"><strong>Outcome:</strong> Faster turnaround, higher transparency for customers, clear technician accountability, optimized bay utilization, and improved revenue per day.</p>
+      `,
+      results: `
+        <h4 class="text-lg font-semibold mb-2">Impact & Results</h4>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+          <li>Daily serviced vehicles increased by <strong>80%</strong>.</li>
+          <li>Customer satisfaction improved significantly due to real-time updates and quality gates.</li>
+          <li>Operational simplicity: fewer reworks and predictable delivery timelines.</li>
+        </ul>
+      `
+    }
+  },
+
+  'ener-g': {
+    id: 'ener-g',
+    title: 'ENER-G Case Study',
+    subtitle: 'Multi-Vehicle Service Optimization',
+    tabs: [
+      { key: 'overview', label: 'Overview' },
+      { key: 'interventions', label: 'Key Interventions' },
+      { key: 'idrive', label: 'iDrive Operational Model' },
+      { key: 'results', label: 'Results' }
+    ],
+    content: {
+      overview: `
+        <h4 class="text-lg font-semibold mb-2">ENER-G Overview</h4>
+        <p class="mb-3">ENER-G partnered with Growbird iDrive to streamline, upgrade, and optimize its multi-vehicle service operations. Their priority was speed, accuracy and improved customer retention across many service points.</p>
+      `,
+      interventions: `
+        <h4 class="text-lg font-semibold mb-2">Key Interventions</h4>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+          <li>Deployment of skilled technicians & role-based training.</li>
+          <li>Digital SOPs & customer flow system for consistent service delivery.</li>
+          <li>Live tracking dashboards for supervisors & customers.</li>
+          <li>Standardized inspection & reporting to reduce rework.</li>
+        </ul>
+      `,
+      idrive: `
+        <h4 class="text-lg font-semibold mb-2">How Growbird iDrive Handled ENER-G Operations</h4>
+        <p class="mb-3">ENER-G required operations that could handle variable vehicle mix and scale quickly. iDrive implemented the following:</p>
+        <ul class="list-disc pl-5 space-y-2 mb-4">
+          <li><strong>Flexible Workforce Pool</strong> — Multi-skilled technician rosters and on-demand staffing to balance peaks.</li>
+          <li><strong>Standardized Digital Task Flows</strong> — Digital job cards with mandatory checkpoints to maintain consistency across sites.</li>
+          <li><strong>Live Dashboard & SLA Alerts</strong> — Real-time KPIs for TAT, queue length, and SLA breach alerts for supervisors to act fast.</li>
+          <li><strong>Customer Communication Engine</strong> — Automated ETA messages, photo evidence, and completion receipts to raise trust & retention.</li>
+          <li><strong>Training & Quality Program</strong> — Regular upskilling and monthly QA audits driven by data from dashboards.</li>
+        </ul>
+      `,
+      results: `
+        <h4 class="text-lg font-semibold mb-2">Results Achieved</h4>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+          <li>Turnaround time reduced by <strong>95%</strong> across pilot locations.</li>
+          <li>Customer retention improved by <strong>80%</strong>.</li>
+          <li>Better technician workflow and lower rework rates.</li>
+        </ul>
+      `
+    }
+  }
+};
+
+/* ---------- Utility: render tabs and content ---------- */
+function buildTabs(caseKey) {
+  const data = caseData[caseKey];
+  const tabsContainer = document.getElementById('modalTabs');
+  tabsContainer.innerHTML = '';
+  data.tabs.forEach((t, idx) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = `px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary/40`;
+    btn.dataset.tab = t.key;
+    btn.innerText = t.label;
+    if (idx === 0) btn.classList.add('bg-background-light', 'dark:bg-background-dark', 'ring-1', 'ring-primary/10');
+    else btn.classList.add('bg-transparent', 'text-gray-600', 'dark:text-text-dark/70');
+    btn.addEventListener('click', () => switchTab(caseKey, t.key, btn));
+    tabsContainer.appendChild(btn);
+  });
+}
+
+function switchTab(caseKey, tabKey, clickedBtn) {
+  const data = caseData[caseKey];
+  // style tabs
+  document.querySelectorAll('#modalTabs button').forEach(b => {
+    b.classList.remove('bg-background-light', 'dark:bg-background-dark', 'ring-1', 'ring-primary/10');
+    b.classList.add('bg-transparent', 'text-gray-600', 'dark:text-text-dark/70');
+  });
+  clickedBtn.classList.remove('bg-transparent', 'text-gray-600', 'dark:text-text-dark/70');
+  clickedBtn.classList.add('bg-background-light', 'dark:bg-background-dark', 'ring-1', 'ring-primary/10');
+
+  // inject content
+  const html = data.content[tabKey] || '<p>No content</p>';
+  document.getElementById('modalBody').innerHTML = html;
+  // set heading subtitle to tab label
+  document.getElementById('modalSubtitle').innerText = data.tabs.find(t => t.key === tabKey).label;
+  // scroll top of modal body
+  document.getElementById('modalBody').scrollTop = 0;
+}
+
+/* ---------- Modal open/close logic ---------- */
+const modal = document.getElementById('caseModal');
+const modalBackdrop = document.getElementById('modalBackdrop');
+const modalBox = document.getElementById('modalBox');
+const closeModalBtn = document.getElementById('closeModalBtn');
+
+function openModal(caseKey) {
+  const data = caseData[caseKey];
+  if (!data) return;
+
+  // set title
+  document.getElementById('modalTitle').innerText = data.title;
+  document.getElementById('modalSubtitle').innerText = data.subtitle;
+
+  // build tabs and show first tab
+  buildTabs(caseKey);
+  // show modal
+  modal.classList.remove('hidden');
+  requestAnimationFrame(() => {
+    modalBackdrop.classList.add('opacity-100');
+    modalBackdrop.classList.remove('opacity-0');
+    modalBox.classList.remove('scale-95');
+    modalBox.classList.add('scale-100');
+  });
+
+  // activate first tab
+  const firstTab = data.tabs[0].key;
+  // wait a tick to ensure buttons exist
+  setTimeout(() => switchTab(caseKey, firstTab, document.querySelector(`#modalTabs button[data-tab="${firstTab}"]`)), 20);
+
+  // trap focus (basic)
+  document.body.style.overflow = 'hidden';
+  // add key listener
+  document.addEventListener('keydown', handleKeyDown);
+}
+
+function closeModal() {
+  modalBackdrop.classList.remove('opacity-100');
+  modalBackdrop.classList.add('opacity-0');
+  modalBox.classList.add('scale-95');
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }, 180);
+  document.removeEventListener('keydown', handleKeyDown);
+}
+
+closeModalBtn.addEventListener('click', closeModal);
+modalBackdrop.addEventListener('click', closeModal);
+
+// allow ESC to close
+function handleKeyDown(e) {
+  if (e.key === 'Escape') closeModal();
+}
+
+// Optional: close if focus moves away (basic accessibility improvement)
+// You can replace this with a proper focus trap if required.
+
+/* Small style helpers to ensure initial classes for transitions */
+modalBackdrop.classList.add('opacity-0');
+modalBox.classList.add('scale-95');
+
+/* expose openModal to global so inline onclick works */
+window.openModal = openModal;
+window.closeModal = closeModal;
+</script>
+
+<!--
+Notes & Tips:
+- This uses theme tokens like bg-background-light, bg-card-dark, text-text-dark etc — keep them defined in your Tailwind config.
+- Modal content is scrollable (max-h set), so long lists stay usable.
+- Tabs are keyboard-focusable; for a stricter accessibility requirement, consider adding a full focus-trap (there are small libraries or you can implement).
+- You can further style tab "active" states to match your exact branding (bolder text, underline).
+-->
+
+
+<!-- System-Driven Growth Section -->
+<section class="py-20 sm:py-24 lg:py-32">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-24">
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">From Guesswork to System-Driven Growth.</h2>
+<p class="mt-6 text-lg text-gray-600 dark:text-gray-400">
+                        iDrive replaces ambiguity with a data-centric framework. Each component is designed to build upon the last, creating a powerful, self-optimizing engine for sustainable expansion.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+<div class="group cursor-pointer rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 text-center shadow-sm transition-all duration-300 hover:border-primary hover:shadow-primary/20 dark:hover:border-primary">
+<span class="material-symbols-outlined text-4xl text-primary">travel_explore</span>
+<p class="mt-2 font-semibold text-gray-800 dark:text-gray-200">Market Study</p>
+</div>
+<div class="group cursor-pointer rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 text-center shadow-sm transition-all duration-300 hover:border-primary hover:shadow-primary/20 dark:hover:border-primary">
+<span class="material-symbols-outlined text-4xl text-primary">checklist</span>
+<p class="mt-2 font-semibold text-gray-800 dark:text-gray-200">Strategy</p>
+</div>
+<div class="group cursor-pointer rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 text-center shadow-sm transition-all duration-300 hover:border-primary hover:shadow-primary/20 dark:hover:border-primary">
+<span class="material-symbols-outlined text-4xl text-primary">hub</span>
+<p class="mt-2 font-semibold text-gray-800 dark:text-gray-200">Execution</p>
+</div>
+<div class="group cursor-pointer rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 text-center shadow-sm transition-all duration-300 hover:border-primary hover:shadow-primary/20 dark:hover:border-primary">
+<span class="material-symbols-outlined text-4xl text-primary">analytics</span>
+<p class="mt-2 font-semibold text-gray-800 dark:text-gray-200">Reporting</p>
+</div>
+<div class="group cursor-pointer rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 text-center shadow-sm transition-all duration-300 hover:border-primary hover:shadow-primary/20 dark:hover:border-primary">
+<span class="material-symbols-outlined text-4xl text-primary">autorenew</span>
+<p class="mt-2 font-semibold text-gray-800 dark:text-gray-200">Optimization</p>
+</div>
+<div class="group cursor-pointer rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 text-center shadow-sm transition-all duration-300 hover:border-primary hover:shadow-primary/20 dark:hover:border-primary">
+<span class="material-symbols-outlined text-4xl text-primary">rocket_launch</span>
+<p class="mt-2 font-semibold text-gray-800 dark:text-gray-200">Scaling</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Industries Section -->
+<section class="py-20 sm:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900/50">
+<div class="container mx-auto px-6">
+<div class="max-w-2xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Industries We Transform</h2>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Our versatile iDrive™ system is engineered to deliver growth across a diverse range of sectors.</p>
+</div>
+<div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-4">
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 text-center shadow-md shadow-primary/10 transition-transform duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined mx-auto text-4xl text-primary">shopping_basket</span>
+<p class="mt-4 font-semibold text-gray-900 dark:text-white">FMCG</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 text-center shadow-md shadow-primary/10 transition-transform duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined mx-auto text-4xl text-primary">precision_manufacturing</span>
+<p class="mt-4 font-semibold text-gray-900 dark:text-white">Industrial Manufacturing</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 text-center shadow-md shadow-primary/10 transition-transform duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined mx-auto text-4xl text-primary">directions_car</span>
+<p class="mt-4 font-semibold text-gray-900 dark:text-white">Automotive</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 text-center shadow-md shadow-primary/10 transition-transform duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined mx-auto text-4xl text-primary">eco</span>
+<p class="mt-4 font-semibold text-gray-900 dark:text-white">Organic &amp; Home Care</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 text-center shadow-md shadow-primary/10 transition-transform duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined mx-auto text-4xl text-primary">electrical_services</span>
+<p class="mt-4 font-semibold text-gray-900 dark:text-white">Electronics</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 text-center shadow-md shadow-primary/10 transition-transform duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined mx-auto text-4xl text-primary">checkroom</span>
+<p class="mt-4 font-semibold text-gray-900 dark:text-white">Apparel &amp; Retail</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 text-center shadow-md shadow-primary/10 transition-transform duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined mx-auto text-4xl text-primary">storefront</span>
+<p class="mt-4 font-semibold text-gray-900 dark:text-white">Local-to-Regional</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 text-center shadow-md shadow-primary/10 transition-transform duration-300 hover:-translate-y-2">
+<span class="material-symbols-outlined mx-auto text-4xl text-primary">escalator_warning</span>
+<p class="mt-4 font-semibold text-gray-900 dark:text-white">Startup Scale-Ups</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Block -->
+<section class="relative py-20 sm:py-24 lg:py-32 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-red-800 dark:from-red-900 dark:to-background-dark"></div>
+<div class="absolute inset-0 opacity-10">
+<img class="h-full w-full object-cover" data-alt="Faint map of India pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAclxvZyF5TkN7WKD5AjUUaTcbTIrw3S2HbgatRTTs08e0ZG-XlyKbjTZXvGL-X6Q1Y_vaP2hdChjJbhpT4JOBua-XczbiGIM5nLdnbRjdDrsIXKmi9NORxUC1lD0d3E1TwjJrAOj3UQBl6jiOsRXAXefv_T7WSPTQarsViOyzaOHiAKBY8jNi0x7e4nu3LkXR2EBQnrOnS1KfrdD7brhXNeIpYtanEoK1NeCrfkBAALadqcjgH0JG8afY8OyXHFfAoJQFjb0Y46BI"/>
+</div>
+<div class="container relative mx-auto px-6 text-center">
+<h2 class="text-4xl font-black tracking-tight text-white sm:text-5xl">Building India’s Next Growth Era</h2>
+<p class="mx-auto mt-6 max-w-3xl text-lg text-white/80">
+            We are dedicated to empowering businesses across the nation, providing the tools, strategies, and execution needed to thrive in a competitive landscape. Our vision is a future where every ambitious company has the power to achieve unprecedented scale.
+          </p>
+</div>
+</section>
+<!-- iDrive Infrastructure Section -->
+<section class="py-20 sm:py-24 lg:py-32">
+<div class="container mx-auto px-6">
+<div class="max-w-2xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">The Full iDrive Infrastructure</h2>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-400">A comprehensive suite of engines built to cover every aspect of your growth journey.</p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 shadow-lg shadow-primary/10 transition-all duration-300 hover:border-primary">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-primary">pin_drop</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Field Sales Engine</h3>
+</div>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Route Optimization</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Real-time Tracking</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Performance Analytics</li>
+</ul>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 shadow-lg shadow-primary/10 transition-all duration-300 hover:border-primary">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-primary">support_agent</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Telecalling &amp; CRM Engine</h3>
+</div>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Automated Dialing</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Lead Management</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Integrated CRM</li>
+</ul>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 shadow-lg shadow-primary/10 transition-all duration-300 hover:border-primary">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-primary">data_thresholding</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Digital Growth Engine</h3>
+</div>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> SEO &amp; SEM Strategy</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Social Media Marketing</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Content Creation</li>
+</ul>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 shadow-lg shadow-primary/10 transition-all duration-300 hover:border-primary">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-primary">map</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Market Expansion &amp; Strategy</h3>
+</div>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Competitor Analysis</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> New Market Entry</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Product-Market Fit</li>
+</ul>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 shadow-lg shadow-primary/10 transition-all duration-300 hover:border-primary">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-primary">psychology</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Sales Automation &amp; Intelligence</h3>
+</div>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> AI-Powered Insights</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Automated Follow-ups</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Predictive Analytics</li>
+</ul>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white dark:bg-gray-800/50 p-6 shadow-lg shadow-primary/10 transition-all duration-300 hover:border-primary">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-primary">campaign</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Brand Promotion &amp; Awareness</h3>
+</div>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Public Relations</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Influencer Marketing</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary mt-0.5">check</span> Community Building</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-900 dark:bg-darkbackground/50 text-gray-300 py-16 border-t border-gray-700">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-4 gap-12 text-center md:text-left">
+        
+        <!-- LOGO & SOCIAL -->
+        <div>
+            <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+                <img src="images/grow bird logo WHITE.png" alt="GrowBird Logo"
+                    class="h-10 w-auto object-contain" />
+                <h3 class="text-2xl font-extrabold text-white"></h3>
+            </div>
+            <p class="text-gray-400">Visionary Growth, Managed Execution.</p>
+
+            <div class="flex space-x-4 mt-6 justify-center md:justify-start">
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="LinkedIn">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="Twitter">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="md:col-span-1">
+            <h4 class="font-extrabold mb-4 text-white text-xl uppercase tracking-wider">Quick Links</h4>
+            <ul class="space-y-3">
+                <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-primary transition">About Us</a></li>
+                <li><a href="ourprocess.html" class="hover:text-primary transition">Case Studies</a></li>
+                <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="md:col-span-1">
+            <h4 class="font-extrabold mb-4 text-white text-xl uppercase tracking-wider">Services</h4>
+            <ul class="space-y-3">
+                <li><a href="#" class="hover:text-primary transition">Strategic Planning</a></li>
+                <li><a href="#" class="hover:text-primary transition">Operational Management</a></li>
+                <li><a href="#" class="hover:text-primary transition">Market Expansion</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="md:col-span-1">
+            <h4 class="font-extrabold mb-4 text-white text-xl uppercase tracking-wider">Get in Touch</h4>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-2 justify-center md:justify-start">
+                    <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                    growbird.official@gmail.com
+                </li>
+                <li class="flex items-center gap-2 justify-center md:justify-start">
+                    <span class="material-symbols-outlined text-primary text-lg">call</span>
+                    +91 95993 79067
+                </li>
+                <li class="flex items-center gap-2 justify-center md:justify-start">
+                    <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                    Mumbai, Maharashtra
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mt-12 text-center text-sm text-gray-500 border-t border-gray-700 pt-8">
+        © 2025 GrowBird India. All rights reserved.
+    </div>
+</footer>
+
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const htmlElement = document.documentElement;
+    const mainHeader = document.getElementById('main-header');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const contactForm = document.getElementById('contact-form');
+
+    // Your logos
+    const lightLogo = "images/grow bird logo option 02.png";
+    const darkLogo  = "images/grow bird logo grey.png";
+
+    // Update logo function
+    function updateLogo(mode) {
+        const logo = document.getElementById("brand-logo");
+        if (!logo) return;
+        logo.src = mode === "dark" ? darkLogo : lightLogo;
+    }
+
+    // Dark Mode Logic
+    function setDarkMode(isDark) {
+        if (isDark) {
+            htmlElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            themeIcon.textContent = 'light_mode';
+            updateLogo("dark");
+        } else {
+            htmlElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            themeIcon.textContent = 'dark_mode';
+            updateLogo("light");
+        }
+    }
+
+    // Initial Load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setDarkMode(savedTheme === 'dark');
+    } else {
+        setDarkMode(false); // default light mode
+    }
+
+    // Theme toggle click
+    themeToggle.addEventListener('click', () => {
+        setDarkMode(!htmlElement.classList.contains('dark'));
+    });
+
+    // Mobile Menu Logic
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.querySelector('.material-symbols-outlined').textContent =
+            mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+    });
+
+    // Close menu when clicking link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'menu';
+        });
+    });
+
+    // Header Scroll Effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            mainHeader.classList.add('shadow-lg', 'bg-background-light', 'dark:bg-background-dark', 'border-opacity-100');
+            mainHeader.classList.remove('bg-background-light/95', 'dark:bg-background-dark/95');
+        } else {
+            mainHeader.classList.remove('shadow-lg', 'bg-background-light', 'dark:bg-background-dark', 'border-opacity-100');
+            mainHeader.classList.add('bg-background-light/95', 'dark:bg-background-dark/95');
+        }
+    });
+
+    // Contact Form Handling
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+
+            console.log('Form data captured:', formData);
+
+            alert('Thank you for reaching out! Your message has been received.');
+            contactForm.reset();
+        });
+    }
+
+});
+</script>
+</body>
+
+</html>
